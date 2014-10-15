@@ -48,13 +48,14 @@ class HClientScript extends CClientScript {
      *
      * @param String $src
      * @param String $position
+     * @param array $htmlOptions
      */
-    public function registerScriptFile($src, $position = NULL) {
+    public function registerScriptFile($src, $position = NULL,array $htmlOptions = array()) {
 
         #    if(Yii::app()->getRequest()->getIsAjaxRequest()) {
         #         Yii::app()->clientScript->registerScript('loadScript_'.$src, "loadJavaScript(\"".$src."\");", CClientScript::POS_BEGIN);
         #      } else {
-        return parent::registerScriptFile($src, $position);
+        return parent::registerScriptFile($src, $position,$htmlOptions);
         #        }
         #registerScriptFile
     }
